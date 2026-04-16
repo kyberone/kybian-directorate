@@ -35,7 +35,7 @@ body {
   }
 
   .directorate-container {
-    flex-direction: column;
+    display: block;
     height: auto;
   }
 
@@ -84,15 +84,18 @@ body {
     height: calc(100vh - 60px);
     background: var(--dir-dark);
     transition: left 0.3s ease;
-    padding: 20px 0;
+    padding: 0;
     border-right: none;
     z-index: 90;
     visibility: hidden;
+    display: none;
   }
 
   .dir-sidebar.open {
     left: 0;
     visibility: visible;
+    padding: 20px 0;
+    display: flex;
   }
 
   .hide-mobile {
