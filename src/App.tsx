@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Shield, Target, Crosshair, Zap, AlertOctagon, Map, Lock, Terminal } from 'lucide-react';
+import { Shield, Target, Crosshair, Zap, AlertOctagon, Map, Lock, Terminal, Menu, X } from 'lucide-react';
 import './App.css';
 
 const bounties = [
@@ -14,6 +14,7 @@ function App() {
   const [selectedBounty, setSelectedBounty] = useState<string | null>(null);
   const [loginActive, setLoginActive] = useState(false);
   const [targetPos, setTargetPos] = useState({ x: 50, y: 50 });
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -32,27 +33,38 @@ function App() {
   return (
     <div className={`directorate-container ${isAlert ? 'red-alert' : ''}`}>
       <div className="scanline-red" />
+
+      {/* Mobile Top Bar */}
+      <div className="mobile-header">
+        <div className="dir-logo-sm">
+          <Shield size={24} className="dir-red" />
+          <h2 className="brutalist">DIRECTORATE</h2>
+        </div>
+        <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
+          {menuOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
+      </div>
       
       {/* Sidebar Nav */}
-      <aside className="dir-sidebar industrial-panel">
-        <div className="dir-logo">
+      <aside className={`dir-sidebar industrial-panel ${menuOpen ? 'open' : ''}`}>
+        <div className="dir-logo hide-mobile">
           <Shield size={40} className="dir-red" />
           <h2 className="brutalist">THE<br/>DIRECTORATE</h2>
         </div>
         <nav className="dir-nav">
-          <a href="#dead-reckoning" className="nav-item active">
+          <a href="#dead-reckoning" className="nav-item active" onClick={() => setMenuOpen(false)}>
             <Map size={18} />
             <span>DEAD_RECKONING</span>
           </a>
-          <a href="#bounty-board" className="nav-item">
+          <a href="#bounty-board" className="nav-item" onClick={() => setMenuOpen(false)}>
             <Target size={18} />
             <span>BOUNTY_BOARD</span>
           </a>
-          <a href="#weapon-specs" className="nav-item">
+          <a href="#weapon-specs" className="nav-item" onClick={() => setMenuOpen(false)}>
             <Crosshair size={18} />
             <span>X-GLASS_SPECS</span>
           </a>
-          <a href="https://kybian.com" className="nav-item hub-relay">
+          <a href="https://kybian.com" className="nav-item hub-relay" onClick={() => setMenuOpen(false)}>
             <Zap size={18} />
             <span>HUB_RELAY</span>
           </a>

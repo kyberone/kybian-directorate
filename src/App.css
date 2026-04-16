@@ -39,38 +39,120 @@ body {
     height: auto;
   }
 
-  .dir-sidebar {
-    width: 100%;
-    padding: 20px 0;
+  /* Mobile Header */
+  .mobile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: var(--dir-grey);
+    border-bottom: 1px solid var(--dir-border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
   }
 
-  .dir-logo {
-    text-align: center;
-    margin-bottom: 20px;
+  .dir-logo-sm {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .dir-logo-sm h2 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #fff;
+  }
+
+  .menu-toggle {
+    background: transparent;
+    border: none;
+    color: var(--dir-red);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Sidebar Adjustment */
+  .dir-sidebar {
+    position: fixed;
+    top: 60px; /* height of mobile-header */
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 60px);
+    background: var(--dir-dark);
+    transition: left 0.3s ease;
+    padding: 20px 0;
+    border-right: none;
+    z-index: 90;
+  }
+
+  .dir-sidebar.open {
+    left: 0;
+  }
+
+  .hide-mobile {
+    display: none;
   }
 
   .dir-nav {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: column;
   }
 
   .nav-item {
-    padding: 10px 20px;
-    font-size: 0.7rem;
+    padding: 20px 30px;
+    font-size: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   }
 
+  .sys-status {
+    margin-top: auto;
+  }
+
+  /* Content Adjustment */
   .dir-hero {
-    height: auto;
-    min-height: 300px;
+    margin: 10px;
+    height: 300px;
+  }
+
+  .hero-text-overlay {
+    bottom: 20px;
+    left: 20px;
   }
 
   .hero-text-overlay h1 {
-    font-size: 2rem;
+    font-size: 2.2rem;
+  }
+
+  .hero-text-overlay p {
+    font-size: 0.75rem;
+    max-width: 80%;
   }
 
   .dir-grid {
     grid-template-columns: 1fr;
+    padding: 0 10px 20px 10px;
+    gap: 10px;
   }
+
+  .bounty-img-wrap {
+    height: 180px;
+  }
+
+  .b-name {
+    font-size: 0.9rem;
+  }
+
+  .warning-banner {
+    font-size: 0.65rem;
+    padding: 5px 10px;
+  }
+}
+
+.mobile-header {
+  display: none;
 }
 
 
