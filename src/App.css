@@ -11,7 +11,7 @@ body {
   background-color: var(--dir-dark);
   color: #ccc;
   font-family: 'Roboto Condensed', sans-serif;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .brutalist {
@@ -24,10 +24,55 @@ body {
 .dir-red { color: var(--dir-red); }
 
 .directorate-container {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   transition: background-color 0.1s;
 }
+
+@media (max-width: 768px) {
+  body {
+    overflow-y: auto;
+  }
+
+  .directorate-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .dir-sidebar {
+    width: 100%;
+    padding: 20px 0;
+  }
+
+  .dir-logo {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .dir-nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .nav-item {
+    padding: 10px 20px;
+    font-size: 0.7rem;
+  }
+
+  .dir-hero {
+    height: auto;
+    min-height: 300px;
+  }
+
+  .hero-text-overlay h1 {
+    font-size: 2rem;
+  }
+
+  .dir-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 
 .red-alert {
   background-color: rgba(255, 62, 62, 0.1);
