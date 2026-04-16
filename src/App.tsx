@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Shield, Target, Crosshair, Zap, AlertOctagon, Map, ChevronRight, Lock, Eye, Terminal } from 'lucide-react';
+import { Shield, Target, Crosshair, Zap, AlertOctagon, Map, Lock, Terminal } from 'lucide-react';
 import './App.css';
 
 const bounties = [

@@ -1,73 +1,20 @@
-# React + TypeScript + Vite
+# THE DIRECTORATE [Project Dead Reckoning]
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+"Total Compliance is Mandatory. Glory to Order."
 
-Currently, two official plugins are available:
+Unauthorized access to this command terminal is a capital crime. This portal monitors the progress of Operation: Dead Reckoning and the annexation of the Grey Zones.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## [ COMMAND OVERVIEW ]
+Led by High-Inquisitor Valerius, the Directorate is the totalitarian heart of the Mandate. We seek to recover lost Vanguard research and weaponize the unstable Kybian-X isotope to ensure absolute galactic control.
 
-## React Compiler
+## [ COMMAND TOOLS ]
+- **Bounty Board:** Interactive tracking of the Vanguard Five fugitives with signal interception tools.
+- **X-Glass Specs:** Classified technical data on Kybian-X weaponization and thermal thresholds.
+- **System Status:** Real-time monitoring of Purge phases and sector stability.
+- **Inquisitor Login:** High-authority access for restricted command logs and classified alerts.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## [ ALERT PROTOCOLS ]
+Red Alert states signify imminent radiological spikes or dissident activity. Citizens are reminded that failure to report to stations during Black Signal testing is punishable by termination.
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
+*UNAUTHORIZED ACCESS DETECTED // HIGH COMMAND LOGGED*
